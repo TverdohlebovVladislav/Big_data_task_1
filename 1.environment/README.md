@@ -207,7 +207,7 @@ pip install -r requirements/local_dev.txt
 
 Build image:
 
-`docker build . -f ./build/docker/Dockerfile -t aap-datahub-etl:latest`
+`docker build . -f ./build/docker/Dockerfile -t {app_name}:latest`
 
 Run containers:
 
