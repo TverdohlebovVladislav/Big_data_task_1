@@ -1,4 +1,4 @@
-##Python
+## Python
 Anaconda: https://www.anaconda.com/products/individual
 
 `conda install pip`
@@ -9,13 +9,13 @@ Jupyter: https://jupyter.org
 
 Jupyter goes with Anaconda distribution, so no need to install it separately
 
-##Docker
+## Docker
 
 1) WSL + Docker Desktop: https://hub.docker.com/editions/community/docker-ce-desktop-windows
 
 2) Docker CE on Linux inside virtual machine.
 
-###Installing VirtualBox and creating virtual machine
+### Installing VirtualBox and creating virtual machine
 
 We cannot use virtual machine Docker and WSL Docker simultaneously. If you use WSL 2 it is obligated to disable "Virtual Machine Platform" Windows feature:
 ![Virtual Machine Platform](images/img.png)
@@ -38,7 +38,7 @@ At last let's configure port forwarding for SSH:
 ![ssh](images/img_3.png)
 ![port](images/img_4.png)
 
-###Setting up Linux (Ubuntu 21.10)
+### Setting up Linux (Ubuntu 21.10)
 
 Start VM and install OS as usual:
 
@@ -68,7 +68,7 @@ Now you can connect to VM:
 
 `ssh <vm_user_name>@localhost -p 2222`
 
-###Enable SSH
+### Enable SSH
 
 If you use PowerShell and it returns error that 'ssh' is not recognized:
 
@@ -87,9 +87,9 @@ And execute command to install the OpenSSH Client and restart PowerShell:
 
 Actual instruction: https://docs.microsoft.com/ru-ru/windows-server/administration/openssh/openssh_install_firstuse
 
-###Installing required software
+### Installing required software
 
-####Docker
+#### Docker
 The Docker installation package available in the official Ubuntu repository may not be the latest version. To ensure we get the latest version, we’ll install Docker from the official Docker repository. To do that, we’ll add a new package source, add the GPG key from Docker to ensure the downloads are valid, and then install the package.
 
 Actual instruction: https://docs.docker.com/engine/install/ubuntu/
@@ -128,7 +128,7 @@ Relogin and check:
 docker run hello-world
 ```
 
-####Docker compose
+#### Docker compose
 
 Although we can install Docker Compose from the official Ubuntu repositories, it is several minor version behind the latest release, so we’ll install Docker Compose from the Docker’s GitHub repository.
 
@@ -152,7 +152,7 @@ sudo curl \
 
 Reload terminal.
 
-####Docker ctop
+#### Docker ctop
 
 This tool allows to control and interact with containers.
 
@@ -176,7 +176,7 @@ Check python version and install venv. For example for python 3.9:
 
 `sudo apt install python3.9-venv`
 
-####Create virtual environment
+#### Create virtual environment
 
 ```
 python3 -m venv venv
@@ -188,7 +188,7 @@ pip install wheel
 pip install -r requirements/local_dev.txt
 ```
 
-####Run project for development
+#### Run project for development
 
 Build image:
 
