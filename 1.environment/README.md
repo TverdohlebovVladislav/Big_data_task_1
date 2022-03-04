@@ -215,7 +215,7 @@ Run containers:
 
 Add port forwarding rule for web(8088 for example):
 
-![](images\img_16.png)
+![](images/img_16.png)
 
 Install Apache Spark:
 https://spark.apache.org/downloads.html
