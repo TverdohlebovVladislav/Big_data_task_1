@@ -18,6 +18,7 @@ Jupyter goes with Anaconda distribution, so no need to install it separately
 ### Installing VirtualBox and creating virtual machine
 
 We cannot use virtual machine Docker and WSL Docker simultaneously. If you use WSL 2 it is obligated to disable "Virtual Machine Platform" Windows feature:
+
 ![Virtual Machine Platform](images/img.png)
 
 Install Oracle VirtualBox: https://www.oracle.com/ru/virtualization/technologies/vm/downloads/virtualbox-downloads.html
@@ -25,6 +26,7 @@ Install Oracle VirtualBox: https://www.oracle.com/ru/virtualization/technologies
 Create virtual machine with 6 GB RAM and 85 GB storage at least.
 
 Open of your VM settings and check "Enable Nested VT-x/AMD-V" and define number of processor:
+
 ![VM](images/img_1.png)
 
 If your "Enable Nested VT-x/AMD-V" is inactive, you should execute command "VBoxManage.exe modifyvm <vm-name> --nested-hw-virt on" VBoxManage.exe is located in C:\Program Files\Oracle\VirtualBox folder.
@@ -32,10 +34,13 @@ If your "Enable Nested VT-x/AMD-V" is inactive, you should execute command "VBox
 It is time to install OS:
 
 Download image (i will use Ubuntu Server 21.10 - https://releases.ubuntu.com/21.10/ubuntu-21.10-live-server-amd64.iso) and mount it.
+
 ![Mount](images/img_2.png)
 
 At last let's configure port forwarding for SSH:
+
 ![ssh](images/img_3.png)
+
 ![port](images/img_4.png)
 
 ### Setting up Linux (Ubuntu 21.10)
@@ -43,23 +48,33 @@ At last let's configure port forwarding for SSH:
 Start VM and install OS as usual:
 
 ![](images/img_5.png)
+
 ![](images/img_6.png)
+
 ![](images/img_7.png)
+
 ![](images/img_8.png)
+
 ![](images/img_9.png)
+
 ![](images/img_10.png)
+
 ![](images/img_11.png)
 
 You can set up disk partitioning on your own (more information about it https://ubuntu.com/server/docs/install/storage)
 
 I prefer this way:
+
 ![](images/img_12.png)
+
 ![](images/img_13.png)
 
 Don't forget to check OpenSSH server installation:
+
 ![](images/img_14.png)
 
 Don't setup any features, because of old versions in Ubuntu repositories!
+
 ![](images/img_15.png)
 
 Wait until installation is done and reboot.
