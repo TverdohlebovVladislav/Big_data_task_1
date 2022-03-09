@@ -1,4 +1,4 @@
-##DWH and DL differences
+## DWH and DL differences
 
 |                 | Data Lake                             | Data Warehouse                              |
 |-----------------|---------------------------------------|---------------------------------------------|
