@@ -1,5 +1,6 @@
 hdfs
 pandas
+pandasql
 crontab
 
 apache-airflow==2.1.2
