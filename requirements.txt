@@ -1,7 +1,7 @@
 hdfs
 pandas
 pandasql
-crontab
+python-crontab
 
 apache-airflow==2.1.2
 apache-airflow-providers-apache-hdfs
