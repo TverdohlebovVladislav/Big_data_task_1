@@ -61,8 +61,8 @@ pysqldf = lambda q: sqldf(q, globals())
 customer_total_df = pysqldf("""
                     select c.customer_id, sum(p.amount) as amount 
                     from customer_df as c
-                    join payments_df as p on c.customer_id=p.customer_id
-                    
+                    join payments_df as p on c.customer_id=p.customer_id 
+                    WHERE p.date_of_upload BETWEEN '""" + LAST_UPLOAD_DATE + "' AND '" + NOW_DATE + """'
                     group by c.customer_id
                     """)
 
